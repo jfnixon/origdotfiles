@@ -1,0 +1,43 @@
+[user]
+	name = Fred Nixon
+	email = fred@johnfnixon.com
+[alias]
+	co = checkout
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	rs = remote show
+	st = status -sb
+	
+	# Files that are in the staging area
+	added = diff --cached --name-only
+	today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+	ff = merge --ff-only
+[apply]
+	whitespace = nowarn
+[core]
+	editor = mvim
+	excludesfile = ~/.gitignore
+[github]
+	user = jfnixon
+	token = 393f71f6f0db9fe6559f31a411faee81
+[url "git@heroku.com:"]
+	insteadOf = heroku:
+[url "git://github.com/"]
+	# Read-only
+	insteadOf = gh:
+[url "git@github.com:"]
+	# With write access
+	insteadOf = wgh:
+[push]
+	# Push current branch even if you've never pushed it before
+	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[diff]
+	renames = copies
+	mnemonicprefix = true
+[merge]
+	stat = true
