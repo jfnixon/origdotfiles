@@ -44,11 +44,12 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 # -------------------------------------------------------------------
 # Mac only
 # -------------------------------------------------------------------
+alias cbp='pbpaste | less'
 #if [[ $IS_MAC -eq 1 ]]; then
 #    alias ql='qlmanage -p 2>/dev/null' # OS X Quick Look
-#    alias oo='open .' # open current directory in OS X Finder
-#    alias today='calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
-#    alias smart='diskutil info disk0 | grep SMART' # display SMART status of hard drive
+    alias oo='open .' # open current directory in OS X Finder
+    alias today='calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
+    alias smart='diskutil info disk0 | grep SMART' # display SMART status of hard drive
 #    # Hall of the Mountain King
 #    alias cello='say -v cellos "di di di di di di di di di di di di di di di di di di di di di di di di di di"'
 #    # alias to show all Mac App store apps

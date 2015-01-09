@@ -14,8 +14,8 @@
 [apply]
 	whitespace = nowarn
 [core]
-	editor = mvim
-	excludesfile = ~/.gitignore
+	editor = mvim -f
+	excludesfile = /Users/jfnixon/.gitignore_global
 [github]
 	user = jfnixon
 	token = 393f71f6f0db9fe6559f31a411faee81
@@ -41,3 +41,5 @@
 	mnemonicprefix = true
 [merge]
 	stat = true
+[color]
+	ui = true

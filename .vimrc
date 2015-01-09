@@ -13,10 +13,11 @@ let mapleader = ','             " for command-t for now
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 set sessionoptions-=options     " recommended for pathogen
-filetype plugin indent on
+filetype plugin indent on       " automatic indentation
 
 set nowrap
-set tabstop=2 shiftwidth=2      "tab is 2 spaces
+set tabstop=2 shiftwidth=2      " tab is 2 spaces
+set softtabstop=2               " spaces used for all indentation
 set expandtab                   " use spaces
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
