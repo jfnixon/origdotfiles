@@ -32,6 +32,7 @@
 #function parse_git_branch {
 #  (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
 #}
+function git_branch { (git rev-parse --abbrev-ref HEAD) 2> /dev/null }
  
 # Show different symbols as appropriate for various Git repository states
 #function parse_git_state {
@@ -83,15 +84,15 @@
 # determine Ruby version using rbenv
 # ------------------------------------------ 
 
-function _update_ruby_version {
-    typeset -g ruby_version=''
-    #if [[ which rbenv &> /dev/null ]]; then
-      ruby_version=$(rbenv version | sed -e "s, (set.*$,,")
-    #fi
-}
+#function _update_ruby_version {
+#    typeset -g ruby_version=''
+#    #if [[ which rbenv &> /dev/null ]]; then
+#      ruby_version=$(rbenv version | sed -e "s, (set.*$,,")
+#    #fi
+#}
 
 # re-evaluate after every chpwd
-chpwd_functions+=(_update_ruby_version)
+#chpwd_functions+=(_update_ruby_version)
 
 # ------------------------------------------
 # determine current directory, sub in ~ for $HOME
@@ -109,8 +110,8 @@ function current_pwd {
 # PROMPT='$(PR_RED}$(ruby_version} ${PR_BOLD_BLUE}m%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string) \$'
 #
 
-PROMPT='$ruby_version ${PR_BOLD_BLUE}%m%{$rest_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} %# '
+PROMPT='${PR_BOLD_BLUE}%m%{$rest_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_branch) %# '
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
 # RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}${ruby_version}%{$reset_color%}'
-RPROMPT='${PR_RED}${ruby_version}%{$reset_color%}'
+# RPROMPT='${PR_RED}${ruby_version}%{$reset_color%}'

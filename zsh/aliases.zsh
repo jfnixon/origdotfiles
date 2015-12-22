@@ -37,6 +37,10 @@ alias fi='open -a Finder'
 alias h='history'
 alias filecount='find . -type f | wc -l' # number of files (not directories)
 
+# zsh has a new help facility
+unalias run-help
+autoload run-help
+
 #prettyprint some output
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'

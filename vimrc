@@ -5,7 +5,7 @@ execute pathogen#infect()
 
 set nocompatible                " no legacy vi compatibility
 syntax enable
-set background=light            " use solarized colorsheme
+set background=dark             " use solarized colorsheme
 colorscheme solarized
 
 let mapleader = ','             " for command-t for now
@@ -16,15 +16,19 @@ set sessionoptions-=options     " recommended for pathogen
 filetype plugin indent on       " automatic indentation
 
 set nowrap
-set tabstop=2 shiftwidth=2      " tab is 2 spaces
-set softtabstop=2               " spaces used for all indentation
-set expandtab                   " use spaces
+set tabstop=4 shiftwidth=4      " tab is 4 spaces
+set softtabstop=4               " tabs used for all indentation
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
-set hlsearch     " highlight matches
-set incsearch    " incremental searches
-set ignorecase   " searches are case insensitive
-set smartcase    " ... unless they contain at least one capital letter
+set hlsearch					" highlight matches
+set incsearch					" incremental searches
+set ignorecase					" searches are case insensitive
+set smartcase					" ... unless they contain at least one capital letter
+set number						" show line numbers
+set grepprg=ag					" use The Silver Searcher in place of grep
+
+:nnoremap <leader>m :silent !open -a Marked\ 2.app '%:p'<cr>
+map <C-n> :NERDTreeToggle<CR>
 
 " .md extension defaults to Modula2, but we want Markdown
 au BufRead,BufNewFile *.md set filetype=markdown

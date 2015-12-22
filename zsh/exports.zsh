@@ -13,6 +13,9 @@ export TERM=xterm-256color
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
+# zsh has a new online help facility
+export HELPDIR=/usr/local/share/zsh/help
+
 # Enable color in grep
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
@@ -23,6 +26,10 @@ export ARCHFLAGS='-arch x86_64'
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
 export EDITOR='mvim -f'
+
+# nvm node version manager
+export NVM_DIR=~/.nvm
+source "$(brew --prefix nvm)/nvm.sh"
 
 #export NODE_PATH=/opt/github/homebrew/lib/node_modules
 #export PYTHONPATH=/usr/local/lib/python2.6/site-packages

@@ -14,7 +14,7 @@
 [apply]
 	whitespace = nowarn
 [core]
-	editor = mvim -f
+	editor = atom --wait
 	excludesfile = /Users/jfnixon/.gitignore_global
 [github]
 	user = jfnixon
