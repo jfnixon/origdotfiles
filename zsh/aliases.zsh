@@ -8,8 +8,10 @@
 # -------------------------------------------------------------------
 alias ri='ri -Tf ansi' # Search Ruby documentation
 alias rake="noglob rake" # necessary to make rake work inside of zsh
+alias lpruby="enscript --color=1 -Eruby"
+alias ruby2html="enscript --color=1 -C1 -w html -Eruby"
 #alias be='bundle exec'
-#alias bx='bundle exec'
+alias bx='bundle exec'
 #alias gentags='ctags .'
 
 # -------------------------------------------------------------------
@@ -18,7 +20,7 @@ alias rake="noglob rake" # necessary to make rake work inside of zsh
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias 'bk=cd $OLDPWD'
+alias bk='cd $OLDPWD'
 
 # -------------------------------------------------------------------
 # directory information
@@ -108,7 +110,7 @@ alias gf='git reflog'
 alias gh='git hist'
 alias gt='git today'
 
-# curiosities 
+# curiosities
 # gsh shows the number of commits for the current repos for all developers
 #alias gsh="git shortlog | grep -E '^[ ]+\w+' | wc -l"
 
@@ -122,4 +124,3 @@ alias tmux='TERM=screen-256color-bce tmux'
 alias acat='< ~/.zsh/aliases.zsh'
 alias fcat='< ~/.zsh/functions.zsh'
 alias sz='source ~/.zshrc'
-
