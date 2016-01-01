@@ -9,4 +9,6 @@ source ~/.zsh/bindkeys.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/zsh_hooks.zsh
-# source  ${HOME}/.dotfiles/z/z.sh
+
+# add fish-ish syntax highlighting and command history search
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
