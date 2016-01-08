@@ -5,16 +5,17 @@
 	co = checkout
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
 	rs = remote show
-	st = status -sb
-	
-	# Files that are in the staging area
+  s  = status
+  st = status -sb
+
+  # Files that are in the staging area
 	added = diff --cached --name-only
 	today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 	ff = merge --ff-only
 [apply]
 	whitespace = nowarn
 [core]
-	editor = atom --wait
+  editor = /usr/local/bin/emacs
 	excludesfile = /Users/jfnixon/.gitignore_global
 [github]
 	user = jfnixon
@@ -43,3 +44,5 @@
 	stat = true
 [color]
 	ui = true
+[fetch]
+	prune = true

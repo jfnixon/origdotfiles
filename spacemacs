@@ -24,16 +24,22 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode)
+     (ruby :variables
+            ruby-enable-ruby-on-rails-support t)
+      ruby-on-rails
      ;; better-defaults
      emacs-lisp
      ;; git
      ;; markdown
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-shell 'multi-term
+            shell-default-term-shell "/usr/local/bin/fish" )
+     (ibuffer :variables ibuffer-group-buffers-by 'projects)
      ;; spell-checking
-     ;; syntax-checking
+     syntax-checking
      ;; version-control
      osx
      )
