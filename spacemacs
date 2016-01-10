@@ -211,7 +211,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -241,6 +241,10 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost any
 user code here.  The exception is org related code, which should be placed in
 `dotspacemacs/user-config'."
+  (setq scroll-margin 5
+        scroll-preserve-screen-position 1)
+  (setq-default frame-title-format '((:eval (if (buffer-file-name)
+                                                (abbreviate-file-name (buffer-file-name)) "%f"))))
   )
 
 (defun dotspacemacs/user-config ()
