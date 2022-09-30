@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-My OS X setup
+My OS X & Linux config setup
